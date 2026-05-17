@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    let pink = {
+      uname: 'pink老师',
+      age: '18',
+      gender: '女',
+      //方法
+      song: function () {
+        console.log('冰雨');
+      }
+    }
+    console.log(pink);
+    // 调用方法
+    pink.song();
+    let obj = {
+      'goods-name': '小米',
+      uname: '小米小米10',
+      num: '1000012816024',
+      weight: '0.5kg',
+      address: '中国大陆'
+    }
+    console.log(obj);
+    // 查找
+    console.log(obj.uname);
+    console.log(obj.num);
+    console.log(obj['goods-name']);
+    // 改
+    pink.gender = '男';
+    console.log(pink);
+    // 增
+    pink.hobby = '足球';
+    console.log(pink);
+    // 删
+    delete pink.age;
+    console.log(pink);
+    //遍历对象
+    for (let k in obj) {
+      console.log(obj[k]);
+    }
+  </script>
+</body>
+
+</html>

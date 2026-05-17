@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    span {
+      display: inline-block;
+      width: 80px;
+      padding: 5px 10px;
+      border: 1px solid black;
+      margin: 2px;
+      border-radius: 5px;
+      text-align: center;
+      box-shadow: 2px 2px 2px rgba(0, 0, 0, .4);
+    }
+  </style>
+</head>
+
+<body>
+
+  <script>
+    // let row = +prompt('请输入行数：')
+    // let col = +prompt('请输入列数：')
+    // for (let i = 1; i <= row; i++) {
+    //   for (let j = 1; j <= col; j++) {
+    //     document.write('⭐')
+    //   }
+    //   // 换行
+    //   document.write('<br>')
+    // }
+    // 倒三角
+    for (let i = 1; i <= 5; i++) {
+      for (let j = 1; j <= i; j++) {
+        document.write('⭐')
+      }
+      // 换行
+      document.write('<br>')
+    }
+    // 99乘法表
+    for (let i = 1; i <= 9; i++) {
+      for (let j = 1; j <= i; j++) {
+        document.write(`<span>${j} * ${i} = ${i * j}</span>`)
+      }
+      // 换行
+      document.write('<br>')
+    }
+  </script>
+</body>
+
+</html>
