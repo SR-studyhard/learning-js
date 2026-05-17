@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    let arr = [24, 56, 23, 97, 21];
+    let arr1 = [1, 2, 3, 4, 5, 6, 7];
+    let max = arr[0];
+    let min = arr[0];
+    for (let i = 0; i < arr.length; i++) {
+      if (max < arr[i]) {
+        max = arr[i];
+      }
+      if (min > arr[i]) {
+        min = arr[i];
+      }
+    }
+    console.log(`最大值是${max}`);
+    console.log(`最小值是${min}`);
+    // 增加数组元素 末尾追加
+    arr.push(55);
+    console.log(arr);
+    // 开头追加
+    arr.unshift(22);
+    console.log(arr);
+    // 删除数组元素 末尾删除
+    arr.pop();
+    arr.pop();
+    console.log(arr);
+    // 开头删除
+    arr.shift();
+    arr.shift();
+    console.log(arr);
+    // 指定位置删除
+    // splice(起始位置，删除几个)
+    console.log(arr1);
+    arr1.splice(1, 3);
+    console.log(arr1);
+  </script>
+</body>
+
+</html>

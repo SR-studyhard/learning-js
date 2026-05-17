@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    function getArrSum(arr = []) {
+      let sum = 0;
+      for (let i = 0; i < arr.length; i++) {
+        sum += arr[i];
+      }
+      console.log(sum);
+    }
+    function getArrValue(arr = []) {
+      let max = arr[0];
+      let min = arr[0];
+      for (let i = 0; i < arr.length; i++) {
+        if (max < arr[i]) {
+          max = arr[i];
+        }
+        if (min > arr[i]) {
+          min = arr[i];
+        }
+      }
+      return [max, min];
+    }
+    getArrSum([1, 2, 3, 4, 5]);
+
+    let NewArr = getArrValue([34, 66, 43, 2, 6, 354, 77,])
+    console.log(`数组最大值是${NewArr[0]}`);
+    console.log(`数组最小值是${NewArr[1]}`);
+    //立即执行函数
+    //写法1  (function(){})();
+    //写法2  (function(){}());
+    (function (x, y) {
+      console.log(x + y);
+    })(1, 2);
+    (function (x, y) {
+      console.log(x + y);
+    }(1, 2));
+  </script>
+</body>
+
+</html>

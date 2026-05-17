@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="box">我是文字内容</div>
+  <script>
+    // 修改文字内容
+    const box = document.querySelector('.box');
+    console.log(box.innerText); //获取文字内容
+    box.innerText = '我是一个盒子'; //修改文字内容
+    box.innerText = '<h1>我是一个盒子</h1>'; //修改文字内容  标签会被当做普通文本处理
+    console.log(box.innerHTML);
+    box.innerHTML = '<h1>我是一个盒子</h1>'; //修改文字内容  标签会被当做HTML代码处理
+  </script>
+</body>
+
+</html>
