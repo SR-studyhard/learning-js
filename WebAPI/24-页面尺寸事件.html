@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  div {
+    width: 200px;
+    height: 200px;
+    background-color: pink;
+    padding: 10px;
+    margin: 100px;
+  }
+</style>
+
+<body>
+  <div></div>
+  <script>
+    const div = document.querySelector('div');
+    // 获取元素的可见宽度（包括padding，不包括border）
+    console.log(div.clientWidth);
+    // 获取元素的可见高度（包括padding，不包括border）
+    console.log(div.clientHeight);
+    // 获取元素的可见宽度（包括padding，border，不包括margin）
+    console.log(div.offsetWidth);
+    // 获取元素的可见高度（包括padding，border，不包括margin）
+    console.log(div.offsetHeight);
+    // 获取元素距离父元素的水平距离（不包括margin）
+    console.log(div.offsetLeft);
+    // 获取元素距离父元素的垂直距离（不包括margin）
+    console.log(div.offsetTop);
+    // 获取元素距离页面顶部和左侧的距离（包括margin）
+    console.log(div.getBoundingClientRect());
+
+    // 页面尺寸发生变化时触发
+    window.addEventListener('resize', function () {
+      // 页面尺寸发生变化时执行的代码
+      console.log("页面尺寸发生了变化");
+    });
+  </script>
+</body>
+
+</html>
