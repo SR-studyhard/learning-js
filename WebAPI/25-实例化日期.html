@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    div {
+      width: 300px;
+      height: 80px;
+      margin: 100px auto;
+      text-align: center;
+      line-height: 40px;
+      border: 1px solid #000;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <p class="one"></p>
+    <p class="two"></p>
+  </div>
+  <script>
+    //得到当前时间
+    const data = new Date();
+    console.log(data);
+    //得到指定时间
+    const data1 = new Date('2020-10-10 10:10:10');
+    console.log(data1);
+    //得到指定时间
+    const data2 = new Date(2020, 9, 10, 10, 10, 10);
+    console.log(data2);
+    //日期对象方法
+    console.log(data.getFullYear());     //得到年份
+    console.log(data.getMonth() + 1);    //得到月份
+    console.log(data.getDate());         //得到日期
+    console.log(data.getDay());          //得到星期几
+    console.log(data.getHours());        //得到小时
+    console.log(data.getMinutes());      //得到分钟
+    console.log(data.getSeconds());      //得到秒数
+    //第一种写法
+    const one = document.querySelector('.one');
+    function getMyData() {
+      const data = new Date();
+      let h = data.getHours();
+      h = h < 10 ? '0' + h : h;
+      let m = data.getMinutes();
+      m = m < 10 ? '0' + m : m;
+      let s = data.getSeconds();
+      s = s < 10 ? '0' + s : s;
+      return `${data.getFullYear()}年${data.getMonth() + 1}
+      月${data.getDate()}日 星期${data.getDay()} 
+      ${h}:${m}:${s}`
+    }
+    one.innerHTML = getMyData();
+    setInterval(function () {
+      one.innerHTML = getMyData();
+    }, 1000)
+    //第二种写法
+    const two = document.querySelector('.two');
+    two.innerHTML = data.toLocaleString();
+    setInterval(function () {
+      const data = new Date();
+      two.innerHTML = data.toLocaleString();
+    }, 1000)
+    // 时间戳
+    const data3 = new Date();
+    console.log(data3.getTime());
+    console.log(+new Date());
+    console.log(Date.now());
+  </script>
+</body>
+
+</html>
